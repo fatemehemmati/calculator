@@ -1,0 +1,17 @@
+div.container {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  border: 10px;
+  border-color: black;
+  width: 50%;
+  background-color: aqua;
+}
+
+div.container p.screen {
+  border: 10px;
+  border-color: black;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=style.css.map */
