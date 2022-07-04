@@ -1,17 +1,70 @@
-div.container {
-  position: absolute;
+div.calculator {
   display: -ms-grid;
   display: grid;
-  border: 10px;
+  border-style: solid;
+  border-width: 3px;
   border-color: black;
   width: 50%;
   background-color: aqua;
 }
 
-div.container p.screen {
-  border: 10px;
+div.calculator p.screen {
+  border-style: solid;
+  border-width: 2px;
   border-color: black;
+  border-radius: 5%;
   padding-left: 10px;
   margin-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+div.calculator .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  padding-bottom: 10px;
+}
+
+div.calculator .container .numbers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+div.calculator .container .btn {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 10%;
+  padding-left: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+div.calculator .container .btn .btn-0 {
+  grid-area: span;
+}
+
+div.calculator .container .operators {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding-right: 10PX;
+}
+
+div.calculator .container .operators .btn-operator {
+  border-style: solid;
+  border-radius: 10%;
+  border-color: black;
+  border-width: 2px;
 }
 /*# sourceMappingURL=style.css.map */
