@@ -1,63 +1,114 @@
-div.calculator{
-  
+$border-color:rgb(66, 51, 99);
+$text-color: rgb(46, 45, 73);
+$button-background-color: rgb(103, 112, 156);
+$operator-bg-color:rgb(117, 112, 157);
+body{
+    header{
+        text-align: center;
+        text-transform: capitalize;
+        color:rgb(160, 61, 138)
+    }
+    main{
+    display: flex;
+    justify-content: center;
 
+.calculator{
+  
+  height: 400px; 
   display: grid;
   border-style:solid;
   border-width: 3px;
-  border-color: black;
-  width: 50%;
-  background-color: aqua;
- 
-  p.screen{
-        border-style: solid;
-        border-width: 2px;
-        border-color: black; 
-        border-radius: 5%;
-        padding-left: 10px;
-        margin-left: 10px;
-        padding-right: 10px;
-        margin-right: 10px;
-    }
-    .container{
-        display: grid;
-      grid-template-columns: 3fr 1fr;
-      padding-bottom: 10px;
+  border-color:$border-color;
+  border-radius: 7%;
+  width: 70%;
+  background-color: rgb(90, 98, 139);
 
-    .numbers{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    }
-    .btn{
-         border-style: solid;
+  
+ div.sum{
+      height: 25%;
+       p.screen{
+        border-style: solid;
+        border-color: rgb(169, 156, 100);
+        background-color: rgb(244, 237, 197);
         border-width: 2px;
-        border-color: black; 
         border-radius: 10%;
         padding-left: 10px;
         margin-left: 10px;
         padding-right: 10px;
         margin-right: 10px;
+        height:100%;
+         font-size: xx-large;
+         margin-top: 15px;
+         color:rgb(110, 100, 25);
+         
+     
+      
+    } 
+ }
+    
+  
+ 
+    .container{
+        display: grid;
+      grid-template-columns: 3fr 1fr;
+      padding-bottom: 10px;
+      margin-top: -100px;
+      margin-bottom:5PX;
+
+    .numbers{
+        display: grid;
+        row-gap: 13px;
         
-        .btn-0{
-           grid-area: span;
-        }
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+      
+
+    }
+    .btn{
+         border-style: solid;
+        border-width: 2px;
+        border-color: $border-color; 
+        border-radius: 10%;
+        padding-left: 10px;
+        margin-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+          background-color: $button-background-color;
+          color: $text-color;
+     
+    
        }
 
 
 
        .operators{
            display: grid;
+           row-gap: 10px;
            grid-template-columns: 1fr;
            grid-template-rows: 1fr 1fr 1fr 1fr;
            padding-right: 10PX;
+           
            .btn-operator{
                border-style: solid;
                border-radius: 10%;
-               border-color: black;
+               border-color: $border-color;
                border-width: 2px;
+               font-size: xx-large;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               color:$text-color;
+              background-color:  $operator-bg-color;
+     
            }
        }
    
     }
 }
+ }
 
+}
