@@ -5,7 +5,7 @@ const operatorButtonCollection = document.getElementsByClassName("btn-operator")
 const equal = document.getElementById('btn-eql')
 const clear = document.getElementById('btn-clear');
 const sum = document.getElementById('screen');
-const bt = document.getElementById('btn-1');
+
 
 console.log(sum);
 const numberButtons = [...numberButtonCollection]; 
@@ -15,11 +15,13 @@ let otherValue;
 let currentValue = 0;
 let operator = '';
 
- equal.addEventListener("click",function(){calculate()} );
 
-//  clear.addEventListener("click", clearAll());
+ equal.addEventListener("click",function(){calculate()} );
+ clear.addEventListener("click", function () { clearAll() });
+ 
 function setValues(element) {
     console.log(element, "set value")
+    
     if(operator===''){
         if(currentValue===0){
             currentValue = element.textContent;
@@ -43,12 +45,21 @@ function setValues(element) {
           currentValue = Number(currentValue) / Number(otherValue);
       }
     }
+
+    
 }
    
 function calculate() {
-   
-        sum.textContent = currentValue;
-    }
+    sum.textContent = currentValue;
+    currentValue = 0;
+    operator = "";
+}
+    
+function clearAll() {
+    currentValue = 0;
+    sum.textContent = 0;
+    operator = '';
+}
 
 
 numberButtons.forEach(element => {
