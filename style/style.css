@@ -29,7 +29,7 @@ body main .calculator div.sum {
   height: 25%;
 }
 
-body main .calculator div.sum p.screen {
+body main .calculator div.sum #screen {
   border-style: solid;
   border-color: #a99c64;
   background-color: #f4edc5;
