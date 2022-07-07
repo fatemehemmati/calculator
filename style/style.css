@@ -1,13 +1,3 @@
-@media only screen and (min-width: 100px) {
-  header {
-    text-transform: capitalize;
-    color: #4b88ca;
-  }
-  .calculator {
-    width: 20%;
-  }
-}
-
 body header {
   text-align: center;
   text-transform: capitalize;
@@ -24,6 +14,7 @@ body main {
 }
 
 body main .calculator {
+  width: 70%;
   height: 400px;
   display: -ms-grid;
   display: grid;
@@ -31,7 +22,6 @@ body main .calculator {
   border-width: 3px;
   border-color: #423363;
   border-radius: 7%;
-  width: 70%;
   background-color: #5a628b;
 }
 
@@ -126,5 +116,23 @@ body main .calculator .container .operators .btn-operator {
           align-items: center;
   color: #2e2d49;
   background-color: #75709d;
+}
+
+@media only screen and (min-width: 769px) {
+  body header {
+    text-transform: capitalize;
+    color: #d863e2;
+  }
+  body main .calculator {
+    width: 50%;
+    height: 450px;
+  }
+  body main .calculator div.sum #screen {
+    height: 70px;
+    line-height: 60px;
+  }
+  body main .calculator .container {
+    margin-top: -150px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

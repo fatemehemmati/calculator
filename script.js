@@ -38,7 +38,7 @@ function setValues(element) {
         if (operator === '+') {
         currentValue= Number(otherValue)+Number(currentValue)
       } if (operator === '-') {
-        currentValue = Number(otherValue) - Number(currentValue);
+        currentValue =Number(currentValue)- Number(otherValue)  ;
         } if (operator === '*') {
          currentValue = Number(otherValue) * Number(currentValue);
         } if (operator === '/') {

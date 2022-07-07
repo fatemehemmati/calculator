@@ -1,4 +1,4 @@
-@import 'responsive';
+
 $border-color:rgb(66, 51, 99);
 $text-color: rgb(46, 45, 73);
 $button-background-color: rgb(103, 112, 156);
@@ -14,14 +14,13 @@ body{
     justify-content: center;
 
 .calculator{
-  
+   width: 70%;
   height: 400px; 
   display: grid;
   border-style:solid;
   border-width: 3px;
   border-color:$border-color;
   border-radius: 7%;
-  width: 70%;
   background-color: rgb(90, 98, 139);
 
   
@@ -113,3 +112,4 @@ body{
  }
 
 }
+@import 'responsive';
