@@ -1,16 +1,16 @@
 body header {
-  text-align: center;
+  text-align: start;
   text-transform: capitalize;
   color: #a03d8a;
+  padding-left: 50px;
 }
 
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 20px;
+  text-align: center;
 }
 
 body main .calculator {
@@ -23,6 +23,7 @@ body main .calculator {
   border-color: #423363;
   border-radius: 7%;
   background-color: #5a628b;
+  position: absolute !important;
 }
 
 body main .calculator div.sum {
@@ -88,6 +89,10 @@ body main .calculator .container .btn {
   color: #2e2d49;
 }
 
+body main .calculator .container .btn:hover {
+  background-color: #b7bedb;
+}
+
 body main .calculator .container .operators {
   display: -ms-grid;
   display: grid;
@@ -118,21 +123,48 @@ body main .calculator .container .operators .btn-operator {
   background-color: #75709d;
 }
 
+body main .calculator .container .operators .btn-operator:hover {
+  background-color: #c28dba;
+}
+
+body main .caption {
+  padding-left: 50px;
+}
+
+@media only screen and (min-width: 481px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .calculator {
+    height: 400px;
+    width: 80%;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   body header {
     text-transform: capitalize;
     color: #d863e2;
   }
+  body main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   body main .calculator {
-    width: 50%;
-    height: 450px;
+    width: 40%;
+    height: 350px;
   }
   body main .calculator div.sum #screen {
-    height: 70px;
+    height: 50px;
     line-height: 60px;
   }
   body main .calculator .container {
-    margin-top: -150px;
+    margin-top: -90px;
   }
 }
 /*# sourceMappingURL=style.css.map */

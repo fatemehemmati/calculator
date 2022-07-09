@@ -5,13 +5,16 @@ $button-background-color: rgb(103, 112, 156);
 $operator-bg-color:rgb(117, 112, 157);
 body{
     header{
-        text-align: center;
+        text-align:start;
         text-transform: capitalize;
-        color:rgb(160, 61, 138)
+        color:rgb(160, 61, 138);
+        padding-left: 50px;
     }
     main{
     display: flex;
-    justify-content: center;
+   padding-left: 20px;
+   text-align: center;
+  
 
 .calculator{
    width: 70%;
@@ -22,6 +25,7 @@ body{
   border-color:$border-color;
   border-radius: 7%;
   background-color: rgb(90, 98, 139);
+  position: absolute !important;
 
   
  div.sum{
@@ -80,6 +84,9 @@ body{
           background-color: $button-background-color;
           color: $text-color;
      
+         &:hover{
+              background-color: rgb(183, 190, 219);
+          }
     
        }
 
@@ -103,13 +110,19 @@ body{
                align-items: center;
                color:$text-color;
               background-color:  $operator-bg-color;
+               &:hover{
+              background-color: rgb(194, 141, 186);
+          }
      
            }
        }
    
     }
 }
+ .caption{
+     padding-left: 50px;
  }
-
+ }
+ 
 }
 @import 'responsive';

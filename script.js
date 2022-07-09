@@ -1,10 +1,12 @@
 'use strict';
-
+const calc = document.querySelector('.calculator');
 const numberButtonCollection = document.getElementsByClassName("btn-number");
 const operatorButtonCollection = document.getElementsByClassName("btn-operator");
 const equal = document.getElementById('btn-eql')
 const clear = document.getElementById('btn-clear');
 const sum = document.getElementById('screen');
+var prevX = 0;
+var prevY = 0;
 
 
 console.log(sum);
@@ -70,6 +72,39 @@ operatorButtons.forEach((element) => {
         operator = element.textContent;
     });
 });
+//moving calculator
+
+//calc.addEventListener('mousedown', mousedown);
+  
+function mousemove(e) {
+
+   
+   let newX = prevX - e.clientX;
+   let newY = prevY - e.clientY;
+
+   const rect = calc.getBoundingClientRect();
+   
+    calc.style.left = rect.left - newX + "px";
+    
+    calc.style.top = rect.top - newY + "px";
+    console.log(calc);
+   prevX = e.clientX;
+   prevY = e.clientY;
+}
+ 
+    function mouseup() {
+      window.removeEventListener("mousemove", mousemove);
+      window.removeEventListener("mouseup", mouseup);
+    }
+function mousedown(e) {
+    prevX = e.clientX;
+    prevY = e.clientY;
+    window.addEventListener('mousemove', mousemove);
+      //window.addEventListener("mouseup", mouseup);
+
+ }
+
+
     
 
 

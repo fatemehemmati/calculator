@@ -1,3 +1,19 @@
+@media  only screen and(min-width:481px) {
+    body{
+        main{
+            flex-direction: column;
+            .calculator{
+                 height: 400px;
+                 width: 80%;
+              .container{
+             
+              
+                 } 
+              }
+            }
+        }
+    }
+
 @media only screen and(min-width: 769px) {
      body{
         header{
@@ -7,17 +23,18 @@
     } 
       
    main{
+       flex-direction: row;
         .calculator{
-        width: 50%;
-        height:450px;
+        width: 40%;
+        height:350px;
        div.sum{
            #screen{
-               height:70px;
+               height:50px;
                line-height:60px;
            }
        }
        .container{
-           margin-top:-150px ;
+           margin-top:-90px ;
        }
     }
 
@@ -26,6 +43,4 @@
 
 }
 }
-@media  only screen and(min-width:) {
-    
-}
+
